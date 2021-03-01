@@ -1,0 +1,12 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://sharma.org/spring/reference.xsd">
+
+    <complexType name="enrollee">
+        <sequence>
+            <element name="personId" type="string"/>
+            <element name="enrolleeId" type="string"/>
+            <element name="enrolleeName" type="string"/>
+        </sequence>
+    </complexType>
+
+</schema>
