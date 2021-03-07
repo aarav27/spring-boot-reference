@@ -31,7 +31,6 @@ public class EnrolleeService {
             enrollee = convert(reactiveEnrolleeProvider.getEnrolleeByEnrolleeId(enrolleeId));
         } catch (Exception ex) {
             logger.error(format("Unable to retrieve enrollee detail for the given enrollee-id: {0}", enrolleeId, ex));
-            //throw new PlatformException(ErrorCode.REFERENCE_001, ex);
         }
         return enrollee;
     }
