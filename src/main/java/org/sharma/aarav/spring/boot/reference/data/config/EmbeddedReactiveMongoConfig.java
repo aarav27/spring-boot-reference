@@ -36,7 +36,8 @@ public class EmbeddedReactiveMongoConfig extends AbstractReactiveMongoConfigurat
     @Bean
     @DependsOn("embeddedMongoServer")
     public MongoClient reactiveMongoClient() {
-        int port = environment.getProperty("local.mongo.port", Integer.class);
+        int port = environment.getProperty("local.mongo.port")!=null ?
+                environment.getProperty("local.mongo.port", Integer.class) : environment.getProperty("spring.data.mongodb.port", Integer.class);
         return MongoClients.create(String.format("mongodb://localhost:%d", port));
     }
 
