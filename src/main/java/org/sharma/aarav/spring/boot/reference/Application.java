@@ -10,11 +10,12 @@ import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfigurat
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Import;
 
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class , MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
 @ComponentScan(basePackages = {"org.sharma.aarav.spring.boot.reference.*"})
 @AutoConfigureBefore(EmbeddedReactiveMongoConfig.class)
-//@Import(EmbeddedReactiveMongoConfig.class)
+@Import(EmbeddedReactiveMongoConfig.class)
 public class Application {
 
     private static final Logger logger = LoggerFactory
