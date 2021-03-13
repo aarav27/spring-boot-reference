@@ -36,14 +36,17 @@ public class ReactiveEnrolleeProvider {
 
     public Enrollee updateEnrollee(String enrolleeId, String personId, String enrolleeName) {
         Enrollee enrollee = reactiveEnrolleeRepository.findByEnrolleeId(enrolleeId).block();
-        enrollee.setPersonId(personId);
-        enrollee.setEnrolleeName(enrolleeName);
-        return reactiveEnrolleeRepository.save(enrollee).block();
+        if(enrollee!=null) {
+            enrollee.setPersonId(personId);
+            enrollee.setEnrolleeName(enrolleeName);
+            return reactiveEnrolleeRepository.save(enrollee).block();
+        }
+        return null;
     }
 
     public void deleteEnrollee(String enrolleeId) {
         Enrollee enrollee = reactiveEnrolleeRepository.findByEnrolleeId(enrolleeId).block();
-        reactiveEnrolleeRepository.delete(enrollee).block();
+        if (enrollee!=null) reactiveEnrolleeRepository.delete(enrollee).block();
     }
 
 }
