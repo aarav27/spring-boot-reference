@@ -9,12 +9,25 @@ Spring-Boot-Reference service is a Proof of concept (POC) created to demonstrate
 ○ Service Resources are 
 
 * POST (Create)     -> http://<hostname:port>/enrollees
-* GET (Retrieve)    -> http://<hostname:port>/enrollees/all
-* GET (Retrieve)    -> http://<hostname:port>/enrollees/{enrolleeId}
-* GET (Retrieve)    -> http://<hostname:port>/enrollees/{personId}
-* GET (Retrieve)    -> http://<hostname:port>/enrollees/{enrolleeName}
+* GET (Retrieve)    -> http://<hostname:port>/enrollees
+* GET (Retrieve)    -> http://<hostname:port>/enrollees/{id}
+* GET (Retrieve)    -> http://<hostname:port>/enrollees/persons/{id}
+* GET (Retrieve)    -> http://<hostname:port>/enrollees?name={name}
 * PUT (Update)      -> http://<hostname:port>/enrollees
-* DELETE (Delete)   -> http://<hostname:port>/enrollees/{enrolleeId}
+* DELETE (Delete)   -> http://<hostname:port>/enrollees/{id}
 
+
+
+
+
+       
+        
+        
+        
+
+
+
+
+    
 
 

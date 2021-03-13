@@ -26,21 +26,30 @@ public class EnrolleeService {
     }
 
     public org.sharma.aarav.spring.boot.reference.dto.Enrollee getEnrolleeByEnrolleeId(String enrolleeId) {
-        org.sharma.aarav.spring.boot.reference.dto.Enrollee enrollee = null;
         try {
-            enrollee = convert(reactiveEnrolleeProvider.getEnrolleeByEnrolleeId(enrolleeId));
+            return convert(reactiveEnrolleeProvider.getEnrolleeByEnrolleeId(enrolleeId));
         } catch (Exception ex) {
-            logger.error(format("Unable to retrieve enrollee detail for the given enrollee-id: {0}", enrolleeId, ex));
+            logger.error(format("Unable to retrieve enrollee detail for the given enrolleeId: {0}", enrolleeId, ex));
         }
-        return enrollee;
+        return null;
     }
 
     public org.sharma.aarav.spring.boot.reference.dto.Enrollee getEnrolleeByPersonId(String personId) {
-        return convert(reactiveEnrolleeProvider.getEnrolleeByPersonId(personId));
+        try {
+            return convert(reactiveEnrolleeProvider.getEnrolleeByPersonId(personId));
+        } catch (Exception ex) {
+            logger.error(format("Unable to retrieve enrollee detail for the given personId: {0}", personId, ex));
+        }
+        return null;
     }
 
     public List<org.sharma.aarav.spring.boot.reference.dto.Enrollee> getEnrolleeByEnrolleeName(String enrolleeName) {
-        return convert(reactiveEnrolleeProvider.getEnrolleeByEnrolleeName(enrolleeName));
+        try {
+            return convert(reactiveEnrolleeProvider.getEnrolleeByEnrolleeName(enrolleeName));
+        } catch (Exception ex) {
+            logger.error(format("Unable to retrieve enrollee detail for the given enrolleeName: {0}", enrolleeName, ex));
+        }
+        return null;
     }
 
     public void addEnrollee(String enrolleeId, String personId, String enrolleeName) {
@@ -48,7 +57,12 @@ public class EnrolleeService {
     }
 
     public org.sharma.aarav.spring.boot.reference.dto.Enrollee updateEnrollee(String enrolleeId, String personId, String enrolleeName) {
-        return convert(reactiveEnrolleeProvider.updateEnrollee(enrolleeId, personId, enrolleeName));
+        try {
+            return convert(reactiveEnrolleeProvider.updateEnrollee(enrolleeId, personId, enrolleeName));
+        } catch (Exception ex) {
+            logger.error(format("Unable to retrieve enrollee detail for the given enrolleeId: {0}", enrolleeId, ex));
+        }
+        return null;
     }
 
     public void deleteEnrollee(String enrolleeId) {

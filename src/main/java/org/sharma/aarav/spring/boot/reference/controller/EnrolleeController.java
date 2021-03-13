@@ -17,28 +17,23 @@ public class EnrolleeController {
     @Autowired
     private EnrolleeService enrolleeService;
 
-    @GetMapping("/all")
+    @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List<Enrollee>> getAllEnrollees() {
-        return new ResponseEntity<>(enrolleeService.getAllEnrollees(), HttpStatus.OK);
+    public ResponseEntity<List<Enrollee>> getAllEnrollees(@RequestParam(name="name", required = false) String name) {
+        List<Enrollee> enrolless = name != null ? enrolleeService.getEnrolleeByEnrolleeName(name) : enrolleeService.getAllEnrollees();
+        return new ResponseEntity<> (enrolless, HttpStatus.OK);
     }
 
-    @GetMapping("/{enrolleeId}")
+    @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<Enrollee> getEnrolleeByEnrolleeId(@PathVariable("enrolleeId") String enrolleeId) {
+    public ResponseEntity<Enrollee> getEnrolleeByEnrolleeId(@PathVariable("id") String enrolleeId) {
         return new ResponseEntity<>(enrolleeService.getEnrolleeByEnrolleeId(enrolleeId), HttpStatus.OK);
     }
 
-    @GetMapping("/{personId}")
+    @GetMapping("/persons/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<Enrollee> getEnrolleeByPersonId(@PathVariable("personId") String personId) {
+    public ResponseEntity<Enrollee> getEnrolleeByPersonId(@PathVariable("id") String personId) {
         return new ResponseEntity<>(enrolleeService.getEnrolleeByPersonId(personId), HttpStatus.OK);
-    }
-
-    @GetMapping("/{enrolleeName}")
-    @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List<Enrollee>> getEnrolleeByEnrollee(@PathVariable("enrolleeName") String enrolleeName) {
-        return new ResponseEntity<>(enrolleeService.getEnrolleeByEnrolleeName(enrolleeName), HttpStatus.OK);
     }
 
     @PostMapping(consumes= MediaType.APPLICATION_JSON_VALUE)
@@ -50,12 +45,14 @@ public class EnrolleeController {
     @PutMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public ResponseEntity<Enrollee> updateEnrollee(@RequestBody Enrollee enrollee) {
-        return new ResponseEntity<>(enrolleeService.updateEnrollee(enrollee.getEnrolleeId(), enrollee.getPersonId(), enrollee.getEnrolleeName()), HttpStatus.OK);
+        Enrollee enrolleeDto = enrolleeService.updateEnrollee(enrollee.getEnrolleeId(), enrollee.getPersonId(), enrollee.getEnrolleeName());
+        ResponseEntity responseEntity = enrolleeDto !=null ? new ResponseEntity<>(enrolleeDto, HttpStatus.OK) : new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        return responseEntity;
     }
 
-    @DeleteMapping("/{enrolleeId}")
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public void deleteEnrolleeByEnrolleeId(@PathVariable("enrolleeId") String enrolleeId) {
+    public void deleteEnrolleeByEnrolleeId(@PathVariable("id") String enrolleeId) {
         enrolleeService.deleteEnrollee(enrolleeId);
     }
 }
