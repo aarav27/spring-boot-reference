@@ -8,15 +8,15 @@ Spring-Boot-Reference service is a Proof of concept (POC) created to demonstrate
 
 ○ Service Resources are 
 
-* POST (Create)     -> http://<hostname:port>/enrollees
-* GET (Retrieve)    -> http://<hostname:port>/enrollees
-* GET (Retrieve)    -> http://<hostname:port>/enrollees/{id}
-* GET (Retrieve)    -> http://<hostname:port>/enrollees/persons/{id}
-* GET (Retrieve)    -> http://<hostname:port>/enrollees?name={name}
-* PUT (Update)      -> http://<hostname:port>/enrollees
-* DELETE (Delete)   -> http://<hostname:port>/enrollees/{id}
+- POST (Create)     -> http://<hostname:port>/enrollees
+- GET (Retrieve)    -> http://<hostname:port>/enrollees
+- GET (Retrieve)    -> http://<hostname:port>/enrollees/{id}
+- GET (Retrieve)    -> http://<hostname:port>/enrollees/persons/{id}
+- GET (Retrieve)    -> http://<hostname:port>/enrollees?name={name}
+- PUT (Update)      -> http://<hostname:port>/enrollees
+- DELETE (Delete)   -> http://<hostname:port>/enrollees/{id}
 
-### How it works
+### How to run
 
 ○ Prerequisite
 
@@ -41,6 +41,12 @@ Spring-Boot-Reference service is a Proof of concept (POC) created to demonstrate
     Feel free to reach me by email :
         - To make couple of changes in the checked-in code.
         - To install, run, create mongodb instance and database users.
+
+### How to test
+
+○ Using curl 
+
+   - When the spring-boot project is running (using 'How to run' mentioned above) then execute curl commands checked-in in file curl under folder test/resources to test each API.
 
 ### Author
 
