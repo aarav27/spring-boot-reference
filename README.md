@@ -1,6 +1,6 @@
-### Spring Boot Reference (Spring Boot REST API with MongoDB)
+## Spring Boot Reference (Spring Boot REST API with MongoDB)
 
-#### About
+### About
 
 Spring-Boot-Reference service is a Proof of concept (POC) created to demonstrate its feasibility as a realization to design and develop back-end of a website and a mobile app using Spring Boot REST APIs with MongoDB.
 
@@ -16,7 +16,7 @@ Spring-Boot-Reference service is a Proof of concept (POC) created to demonstrate
 * PUT (Update)      -> http://<hostname:port>/enrollees
 * DELETE (Delete)   -> http://<hostname:port>/enrollees/{id}
 
-#### How it works
+### How it works
 
 ○ Prerequisite
 
@@ -42,7 +42,7 @@ Spring-Boot-Reference service is a Proof of concept (POC) created to demonstrate
         - To make couple of changes in the checked-in code.
         - To install, run, create mongodb instance and database users.
 
-#### Author
+### Author
 
 ○ **Aarav Sharma**
 
