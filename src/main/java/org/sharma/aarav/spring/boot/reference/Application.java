@@ -1,9 +1,5 @@
 package org.sharma.aarav.spring.boot.reference;
 
-/**
- * @author Aarav Sharma
- */
-
 import org.sharma.aarav.spring.boot.reference.data.config.EmbeddedReactiveMongoConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +12,9 @@ import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 
+/**
+ * @author Aarav Sharma
+ */
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class , MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
 @ComponentScan(basePackages = {"org.sharma.aarav.spring.boot.reference.*"})
 @AutoConfigureBefore(EmbeddedReactiveMongoConfig.class)
