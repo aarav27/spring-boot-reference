@@ -1,9 +1,5 @@
 package org.sharma.aarav.spring.boot.reference.controller;
 
-/**
- * @author Aarav Sharma
- */
-
 import org.sharma.aarav.spring.boot.reference.service.EnrolleeService;
 import org.sharma.aarav.spring.boot.reference.dto.Enrollee;
 import org.springframework.beans.factory.annotation.Autowired;

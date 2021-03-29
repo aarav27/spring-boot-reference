@@ -1,9 +1,5 @@
 package org.sharma.aarav.spring.boot.reference;
 
-/**
- * @author Aarav Sharma
- */
-
 import org.sharma.aarav.spring.boot.reference.data.config.EmbeddedReactiveMongoConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,9 +1,5 @@
 package org.sharma.aarav.spring.boot.reference.data.config;
 
-/**
- * @author Aarav Sharma
- */
-
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;

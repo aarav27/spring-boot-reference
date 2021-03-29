@@ -1,9 +1,5 @@
 package org.sharma.aarav.spring.boot.reference.data.repository;
 
-/**
- * @author Aarav Sharma
- */
-
 import org.sharma.aarav.spring.boot.reference.data.model.Enrollee;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import reactor.core.publisher.Flux;

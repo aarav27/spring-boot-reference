@@ -1,9 +1,5 @@
 package org.sharma.aarav.spring.boot.reference.service;
 
-/**
- * @author Aarav Sharma
- */
-
 import org.sharma.aarav.spring.boot.reference.data.model.Enrollee;
 import org.sharma.aarav.spring.boot.reference.data.provider.ReactiveEnrolleeProvider;
 
