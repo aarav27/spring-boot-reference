@@ -44,7 +44,7 @@ Spring-Boot-Reference service is a Proof of concept (POC) created to demonstrate
 
 #### Author
 
-**Aarav Sharma**
+○ **Aarav Sharma**
 
 + [github](https://github.com/aarav27)
 + [linkedin](https://www.linkedin.com/in/aaravsharma927/)
