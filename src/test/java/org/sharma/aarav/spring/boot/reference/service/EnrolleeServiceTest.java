@@ -1,9 +1,5 @@
 package org.sharma.aarav.spring.boot.reference.service;
 
-/**
- * @author Aarav Sharma
- */
-
 import org.sharma.aarav.spring.boot.reference.dto.Enrollee;
 import org.sharma.aarav.spring.boot.reference.data.provider.ReactiveEnrolleeProvider;
 import org.junit.Before;
@@ -24,6 +20,9 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * @author Aarav Sharma
+ */
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {EnrolleeService.class, ReactiveEnrolleeProvider.class})
 @EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class , MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
