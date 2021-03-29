@@ -1,5 +1,9 @@
 package org.sharma.aarav.spring.boot.reference.data.config;
 
+/**
+ * @author Aarav Sharma
+ */
+
 import com.mongodb.*;
 import com.mongodb.connection.ClusterSettings;
 import com.mongodb.connection.SslSettings;
