@@ -1,9 +1,5 @@
 package org.sharma.aarav.spring.boot.reference.controller;
 
-/**
- * @author Aarav Sharma
- */
-
 import org.sharma.aarav.spring.boot.reference.service.EnrolleeService;
 import org.sharma.aarav.spring.boot.reference.dto.Enrollee;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +10,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * @author Aarav Sharma
+ */
 @RestController
 @RequestMapping(value = "/enrollees", produces = "application/json")
 public class EnrolleeController {

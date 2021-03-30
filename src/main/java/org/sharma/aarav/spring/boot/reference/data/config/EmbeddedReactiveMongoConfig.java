@@ -1,9 +1,5 @@
 package org.sharma.aarav.spring.boot.reference.data.config;
 
-/**
- * @author Aarav Sharma
- */
-
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
@@ -20,6 +16,9 @@ import com.mongodb.reactivestreams.client.MongoClient;
 import com.mongodb.reactivestreams.client.MongoClients;
 import org.springframework.core.env.Environment;
 
+/**
+ * @author Aarav Sharma
+ */
 @EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class , MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
 @EnableReactiveMongoRepositories(basePackages = "org.sharma.aarav.spring.boot.reference.data")
 @AutoConfigureAfter(EmbeddedMongoAutoConfiguration.class)

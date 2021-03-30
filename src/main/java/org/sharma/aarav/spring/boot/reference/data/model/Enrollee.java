@@ -1,12 +1,11 @@
 package org.sharma.aarav.spring.boot.reference.data.model;
 
-/**
- * @author Aarav Sharma
- */
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * @author Aarav Sharma
+ */
 @Document
 public class Enrollee {
 

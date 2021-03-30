@@ -1,9 +1,5 @@
 package org.sharma.aarav.spring.boot.reference.data.config;
 
-/**
- * @author Aarav Sharma
- */
-
 import com.mongodb.*;
 import com.mongodb.connection.ClusterSettings;
 import com.mongodb.connection.SslSettings;
@@ -19,6 +15,9 @@ import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Aarav Sharma
+ */
 @EnableAutoConfiguration
 @EnableReactiveMongoRepositories(basePackages = "org.sharma.aarav.spring.boot.reference.data")
 public class ReactiveMongoConfig extends AbstractReactiveMongoConfiguration {

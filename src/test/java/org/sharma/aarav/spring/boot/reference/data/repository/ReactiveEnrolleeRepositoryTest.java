@@ -1,9 +1,5 @@
 package org.sharma.aarav.spring.boot.reference.data.repository;
 
-/**
- * @author Aarav Sharma
- */
-
 import org.sharma.aarav.spring.boot.reference.data.config.EmbeddedReactiveMongoConfig;
 import org.sharma.aarav.spring.boot.reference.data.model.Enrollee;
 import org.junit.Before;
@@ -22,6 +18,9 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * @author Aarav Sharma
+ */
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {EmbeddedReactiveMongoConfig.class})
 public class ReactiveEnrolleeRepositoryTest {

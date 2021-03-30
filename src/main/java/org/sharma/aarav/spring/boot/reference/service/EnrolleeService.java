@@ -1,9 +1,5 @@
 package org.sharma.aarav.spring.boot.reference.service;
 
-/**
- * @author Aarav Sharma
- */
-
 import org.sharma.aarav.spring.boot.reference.data.model.Enrollee;
 import org.sharma.aarav.spring.boot.reference.data.provider.ReactiveEnrolleeProvider;
 
@@ -17,6 +13,9 @@ import java.util.stream.Collectors;
 
 import static java.text.MessageFormat.format;
 
+/**
+ * @author Aarav Sharma
+ */
 @Service
 public class EnrolleeService {
 
