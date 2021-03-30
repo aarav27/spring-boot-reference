@@ -22,9 +22,11 @@ Spring-Boot-Reference service is a Proof of concept (POC) created to demonstrate
 
     Java 8, Maven, Git
     
-○ Clone the github Repository locally
+○ Clone the github Repository locally and checkout develop branch
 
     git clone https://github.com/aarav27/spring-boot-reference
+    git branch -a
+    git checkout develop
     
 ○ Build the spring-boot project
 
