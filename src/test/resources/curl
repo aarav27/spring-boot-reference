@@ -1,0 +1,70 @@
+1. Add New Enrollee
+-------------------
+
+    curl -d "{\"enrolleeId\":\"1\", \"personId\":\"101\", \"enrolleeName\":\"George Washington\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/enrollees
+
+    curl -d "{\"enrolleeId\":\"2\", \"personId\":\"201\", \"enrolleeName\":\"John Adams\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/enrollees
+
+    curl -d "{\"enrolleeId\":\"3\", \"personId\":\"301\", \"enrolleeName\":\"Thomas Jefferson\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/enrollees
+
+    curl -d "{\"enrolleeId\":\"4\", \"personId\":\"401\", \"enrolleeName\":\"Thomas Jefferson\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/enrollees
+
+
+2. Get All Enrollees
+--------------------
+
+    curl -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/enrollees
+
+
+3. Get Enrollee By enrolleeId
+-----------------------------
+
+    curl -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/enrollees/1
+
+    curl -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/enrollees/2
+
+    curl -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/enrollees/3
+
+    curl -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/enrollees/4
+
+
+4. Get Enrollee By personId
+---------------------------
+
+    curl -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/enrollees/persons/101
+
+    curl -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/enrollees/persons/201
+
+    curl -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/enrollees/persons/301
+
+    curl -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/enrollees/persons/401
+
+
+5. Get Enrollee By enrolleeName
+-------------------------------
+
+    curl -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/enrollees?name=George+Washington
+
+    curl -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/enrollees?name=John+Adams
+
+    curl -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/enrollees?name=Thomas+Jefferson
+
+    curl -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/enrollees?name=James+Madison
+
+
+6. Update Enrollee
+------------------
+
+    curl -d "{\"enrolleeId\":\"4\", \"personId\":\"401\", \"enrolleeName\":\"James Madison\"}" -H "Content-Type: application/json" -X PUT http://localhost:8080/enrollees
+
+
+7. Delete Enrollee
+------------------
+
+    curl -H "Content-Type: application/json" -X DELETE http://127.0.0.1:8080/enrollees/1
+
+    curl -H "Content-Type: application/json" -X DELETE http://127.0.0.1:8080/enrollees/2
+
+    curl -H "Content-Type: application/json" -X DELETE http://127.0.0.1:8080/enrollees/3
+
+    curl -H "Content-Type: application/json" -X DELETE http://127.0.0.1:8080/enrollees/4
