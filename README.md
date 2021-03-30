@@ -8,13 +8,13 @@ Spring-Boot-Reference service is a Proof of concept (POC) created to demonstrate
 
 ○ Service Resources are 
 
-* POST (Create)     -> http://<hostname:port>/enrollees
-* GET (Retrieve)    -> http://<hostname:port>/enrollees
-* GET (Retrieve)    -> http://<hostname:port>/enrollees/{id}
-* GET (Retrieve)    -> http://<hostname:port>/enrollees/persons/{id}
-* GET (Retrieve)    -> http://<hostname:port>/enrollees?name={name}
-* PUT (Update)      -> http://<hostname:port>/enrollees
-* DELETE (Delete)   -> http://<hostname:port>/enrollees/{id}
+- POST (Create)     -> http://<hostname:port>/enrollees
+- GET (Retrieve)    -> http://<hostname:port>/enrollees
+- GET (Retrieve)    -> http://<hostname:port>/enrollees/{id}
+- GET (Retrieve)    -> http://<hostname:port>/enrollees/persons/{id}
+- GET (Retrieve)    -> http://<hostname:port>/enrollees?name={name}
+- PUT (Update)      -> http://<hostname:port>/enrollees
+- DELETE (Delete)   -> http://<hostname:port>/enrollees/{id}
 
 ### How to run
 
@@ -46,7 +46,7 @@ Spring-Boot-Reference service is a Proof of concept (POC) created to demonstrate
 
 ○ Using curl 
 
-When the spring-boot project is running (using 'How to run' mentioned above) then execute curl commands checked-in in file curl under folder test/resources to test each API.
+   - When the spring-boot project is running (using 'How to run' mentioned above) then execute curl commands checked-in in file curl under folder test/resources to test each API.
 
 ### Author
 
